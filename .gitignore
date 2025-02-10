@@ -26,3 +26,5 @@ macos/
 windows/
 web/
 test/
+
+.idea/
