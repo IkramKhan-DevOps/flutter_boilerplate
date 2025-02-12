@@ -41,14 +41,14 @@ class WebViewScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              'GR1P.ai',
+              'Boilerplate',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w800,
               ),
             ),
             Text(
-              'You are using web version of GR1P AI.',
+              'You are using web version of boilerplate.',
               style: TextStyle(
                 fontSize: 12,
                 fontStyle: FontStyle.italic,
