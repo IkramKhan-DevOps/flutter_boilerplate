@@ -50,7 +50,7 @@ class AuthToken {
 
       // IF NO TOKEN IS NONE LEAVE
       if (value == null || value == '') {
-        Navigator.pushReplacementNamed(context, AppRoutes.splashScreen);
+        Navigator.pushReplacementNamed(context, AppRoutes.authScreen);
 
       // NO TOKEN FOUND
       } else {
@@ -63,7 +63,7 @@ class AuthToken {
           await AuthToken.logoutUser(context);
 
         } else {
-          Navigator.pushReplacementNamed(context, AppRoutes.splashScreen);
+          Navigator.pushReplacementNamed(context, AppRoutes.homeScreen);
         }
 
       }
@@ -103,7 +103,7 @@ class AuthToken {
       AuthToken.isUserLoggedIn = false;
 
       Navigator.popUntil(context, (route) => route.isFirst);
-      Navigator.pushReplacementNamed(context, AppRoutes.splashScreen);
+      Navigator.pushReplacementNamed(context, AppRoutes.authScreen);
     } else {
       // Handle the error case where token could not be removed
       FlushMessage.flushBar(context, 'Error logging out. Please try again.', 'danger');

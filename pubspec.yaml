@@ -25,6 +25,8 @@ dependencies:
   shared_preferences: ^2.3.2
   smooth_page_indicator: ^1.2.0+3
   hooks_riverpod: ^2.5.2
+  curved_navigation_bar: ^1.0.6
+  crystal_navigation_bar: ^1.0.2
 
 dev_dependencies:
   flutter_test:
