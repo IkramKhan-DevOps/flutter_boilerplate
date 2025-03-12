@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/configs/app_routes.dart';
 import '../../core/constants/image_constants.dart';
+import '../../core/storage/auth_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,14 +16,19 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _navigateToLobby();
+    _handleStartup();
   }
 
-  Future<void> _navigateToLobby() async {
-    await Future.delayed(const Duration(seconds: 2));
+  void _handleStartup() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final bool isOnboardingCompleted = prefs.getBool('onboarding') ?? false;
 
-    if (!mounted) return;
-    Navigator.of(context).pushReplacementNamed(AppRoutes.onboardingScreen);
+
+    if (isOnboardingCompleted) {
+      AuthToken.checkLoginStatus(context);
+    } else {
+      Navigator.pushReplacementNamed(context, AppRoutes.onboardingScreen);
+    }
   }
 
   @override

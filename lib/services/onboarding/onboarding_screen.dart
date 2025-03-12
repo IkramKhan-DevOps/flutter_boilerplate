@@ -2,10 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../core/configs/app_colors.dart';
+import '../../core/configs/app_routes.dart';
 import '../../core/constants/image_constants.dart';
+import '../../core/storage/auth_storage.dart';
 import '../../core/widgets/button_widgets.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -151,7 +154,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget getStartedButton() {
     return AppPrimaryButton(
       onPressed: () async {
+        final prefs = await SharedPreferences.getInstance();
+        prefs.setBool('onboarding', true);
 
+        if (!mounted) return;
+        await AuthToken.checkLoginStatus(context);
       },
       title: 'Get Started',
     );
