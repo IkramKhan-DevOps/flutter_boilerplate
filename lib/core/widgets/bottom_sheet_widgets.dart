@@ -20,7 +20,6 @@ class TermsBottomSheetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ColorScheme colors = Theme.of(context).colorScheme;
     var size = MediaQuery.of(context).size;
 
     return InkWell(

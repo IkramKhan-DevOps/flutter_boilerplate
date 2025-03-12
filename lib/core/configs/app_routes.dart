@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import '../../services/onboarding/onboarding_screen.dart';
+import '../../services/onboarding/splash_screen.dart';
 import '../widgets/web_view_screen.dart';
 
 class AppRoutes {
 
-  static const String recordingCompletedScreen = '/recording_completed_screen';
+  // WELCOME
+  static const String onboardingScreen = '/onboarding_screen';
+  static const String splashScreen = '/splash_screen';
 
 
   // OTHER
@@ -11,6 +15,10 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes = {
 
+    splashScreen: (context) => const SplashScreen(),
+    onboardingScreen: (context) => const OnboardingScreen(),
+
     webViewScreen: (context) => const WebViewScreen(),
+
   };
 }
