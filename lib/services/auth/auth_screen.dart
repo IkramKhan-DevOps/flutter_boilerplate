@@ -76,7 +76,7 @@ class AuthScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            'Precision hand scan for a Firearm match.',
+                            'Lets get started with flutter boilerplate',
                             style: TextStyle(
                               color: Colors.grey[300],
                               fontWeight: FontWeight.w600,
