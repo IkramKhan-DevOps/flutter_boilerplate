@@ -40,7 +40,7 @@ class LoginScreen extends ConsumerWidget {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // HEADING ::
                   _buildHeading(context),
@@ -105,16 +105,15 @@ class LoginScreen extends ConsumerWidget {
 Widget _buildHeading(BuildContext context) {
   ColorScheme colors = Theme.of(context).colorScheme;
   return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        'Hey,\nLogin Now!',
+        'Login To Continue!',
         style: TextStyle(
           color: colors.secondary,
           fontWeight: FontWeight.bold,
           fontSize: 30,
         ),
-        textAlign: TextAlign.left,
+        textAlign: TextAlign.center,
       ),
     ],
   );

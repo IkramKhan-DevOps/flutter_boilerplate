@@ -38,7 +38,7 @@ class SignupScreen extends ConsumerWidget {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // HEADING ::
                   _buildHeading(context),
@@ -133,7 +133,7 @@ Widget _buildHeading(BuildContext context) {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        'Hey,\nSignup Now!',
+        'Register Now!',
         style: TextStyle(
           color: colors.secondary,
           fontWeight: FontWeight.bold,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/settings/profile_change_screen.dart';
 import '../../dashboard/dashboard_screen.dart';
 import '../../products/products_screen.dart';
 import '../../services/auth/auth_screen.dart';
@@ -7,6 +8,9 @@ import '../../services/auth/signup_screen.dart';
 import '../../services/bnb/home_screen.dart';
 import '../../services/onboarding/onboarding_screen.dart';
 import '../../services/onboarding/splash_screen.dart';
+import '../../settings/account_remove_screen.dart';
+import '../../settings/notifications_screen.dart';
+import '../../settings/password_change_screen.dart';
 import '../../settings/settings_screen.dart';
 import '../widgets/web_view_screen.dart';
 
@@ -25,8 +29,13 @@ class AppRoutes {
   static const String homeScreen = '/home_screen';
   static const String productsScreen = '/products_screen';
   static const String dashboardScreen = '/dashboard_screen';
-  static const String settingsScreen = '/settings_screen';
 
+  // SETTINGS
+  static const String notificationsScreen = '/notifications_screen';
+  static const String settingsScreen = '/settings_screen';
+  static const String profileChangeScreen = '/profile_change_screen';
+  static const String passwordChangeScreen = '/password_change_screen';
+  static const String accountRemoveScreen = '/account_remove_screen';
 
   // OTHER
   static const String webViewScreen = '/web_view_screen';
@@ -43,7 +52,12 @@ class AppRoutes {
     homeScreen: (context) => const HomeScreen(),
     productsScreen: (context) => const ProductsScreen(),
     dashboardScreen: (context) => const DashboardScreen(),
+
     settingsScreen: (context) => const SettingsScreen(),
+    profileChangeScreen: (context) => ProfileChangeScreen(),
+    passwordChangeScreen: (context) => PasswordChangeScreen(),
+    accountRemoveScreen: (context) => AccountRemoveScreen(),
+    notificationsScreen: (context) => const NotificationsScreen(),
 
     webViewScreen: (context) => const WebViewScreen(),
 
