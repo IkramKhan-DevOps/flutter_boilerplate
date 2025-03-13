@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://github.com/IkramKhan-DevOps/flutter_boilerplate/blob/main/extras/screens/s1.png" width="200" />
+  <img src="https://github.com/IkramKhan-DevOps/flutter_boilerplate/blob/main/extras/screens/s2.png" width="200" />
+  <img src="https://github.com/IkramKhan-DevOps/flutter_boilerplate/blob/main/extras/screens/s4.png" width="200" />
+ <img src="https://github.com/IkramKhan-DevOps/flutter_boilerplate/blob/main/extras/screens/s7.png" width="200" />
+</p>
+
 
 # Flutter Boilerplate
 Welcome to my Flutter Boilerplate – a feature-rich, reusable starting point for building
