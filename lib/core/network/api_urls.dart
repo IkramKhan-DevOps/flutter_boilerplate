@@ -2,7 +2,7 @@ class APIUrl{
 
   // REQUIRED
   static String protocol = 'https';
-  static String domain = 'gr1p.ai';
+  static String domain = '127.0.0.1:8000';
   static String root = '$protocol://$domain/';
   static String api = '${root}api/';
   static String v1 = '${api}v1/';
@@ -49,7 +49,7 @@ class APIUrl{
 class APIWebUrl {
 
   static const String protocol = 'https';
-  static const String domain = 'gr1p.ai';
+  static const String domain = '127.0.0.1:8000';
   static const String base = '${protocol}://${domain}/';
 
   static const String termsAndConditions = '${base}terms-and-conditions/';

@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../core/configs/app_colors.dart';
-import '../../core/configs/app_routes.dart';
 import '../../core/constants/image_constants.dart';
 import '../../core/storage/auth_storage.dart';
 import '../../core/widgets/button_widgets.dart';
@@ -208,7 +207,7 @@ class OnboardingItems {
     OnboardingInfo(
       title: 'Let’s Get Started!',
       description:
-      'Join the community, discover the best fit guns, and enhance your shooting today!',
+      'With fully configured boilerplate for your app!',
       image: LottieConstant.world,
     ),
   ];
