@@ -20,17 +20,17 @@ production app, this boilerplate has you covered.
 ## Screens
 The boilerplate includes a variety of pre-designed screens to jumpstart your app development:
 
-- **Splash**: A polished splash screen to greet users while the app initializes.
-- **Onboarding**: A multi-step onboarding flow for first-time users.
-- **Login**: A secure login screen with input validation.
-- **Signup**: A user registration screen with necessary fields.
-- **Password Reset**: A screen for resetting forgotten passwords.
-- **Home**: The main landing screen after login.
-- **Dashboard**: A customizable dashboard for key app data or metrics.
-- **Settings**: A settings screen for app preferences.
-- **Profile Change**: A screen to update user profile details.
-- **Password Change**: A dedicated screen for updating passwords.
-- **Web View for Links**: A web view screen to display external URLs within the app.
+ - **Splash**: A polished splash screen to greet users while the app initializes.
+ - **Onboarding**: A multi-step onboarding flow for first-time users.
+ - **Login**: A secure login screen with input validation.
+ - **Signup**: A user registration screen with necessary fields.
+ - **Password Reset**: A screen for resetting forgotten passwords.
+ - **Home**: The main landing screen after login.
+ - **Dashboard**: A customizable dashboard for key app data or metrics.
+ - **Settings**: A settings screen for app preferences.
+ - **Profile Change**: A screen to update user profile details.
+ - **Password Change**: A dedicated screen for updating passwords.
+ - **Web View for Links**: A web view screen to display external URLs within the app.
 
 ## Features
 The boilerplate comes with a range of features to help you build a robust Flutter app:
@@ -84,14 +84,14 @@ A collection of reusable, customizable widgets to speed up UI development:
 
 1.  **Clone the Repository**
     `git clone https://github.com/yourusername/flutter-boilerplate.git cd flutter-boilerplate`
-
+    
 2.  **Install Dependencies**
     `flutter pub get`
-
+    
 3.  **Configure the App**
     -   Update lib/config/app_config.dart with your API base URL and other settings.
     -   Add your assets (images, Lottie files, fonts) to the assets/ directory and update pubspec.yaml.
-4.  **Run the App**
+4.  **Run the App** 
     `flutter run`
 
 ## Contributing
