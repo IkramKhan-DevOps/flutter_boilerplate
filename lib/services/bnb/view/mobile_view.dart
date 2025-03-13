@@ -46,12 +46,6 @@ class MobileView extends StatelessWidget {
             unselectedColor: Colors.grey[500],
           ),
           CrystalNavigationBarItem(
-            icon: LineIcons.camera,
-            unselectedIcon: LineIcons.camera,
-            selectedColor: Colors.grey[100],
-            unselectedColor: Colors.grey[500],
-          ),
-          CrystalNavigationBarItem(
             icon: LineIcons.cog,
             unselectedIcon: LineIcons.cog,
             selectedColor: Colors.grey[100],

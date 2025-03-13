@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import '../../dashboard/dashboard_screen.dart';
+import '../../products/products_screen.dart';
 import '../../services/auth/auth_screen.dart';
 import '../../services/auth/login_screen.dart';
 import '../../services/auth/signup_screen.dart';
 import '../../services/bnb/home_screen.dart';
 import '../../services/onboarding/onboarding_screen.dart';
 import '../../services/onboarding/splash_screen.dart';
+import '../../settings/settings_screen.dart';
 import '../widgets/web_view_screen.dart';
 
 class AppRoutes {
@@ -20,6 +23,9 @@ class AppRoutes {
 
   // HOME
   static const String homeScreen = '/home_screen';
+  static const String productsScreen = '/products_screen';
+  static const String dashboardScreen = '/dashboard_screen';
+  static const String settingsScreen = '/settings_screen';
 
 
   // OTHER
@@ -35,6 +41,9 @@ class AppRoutes {
     signupScreen: (context) => SignupScreen(),
 
     homeScreen: (context) => const HomeScreen(),
+    productsScreen: (context) => const ProductsScreen(),
+    dashboardScreen: (context) => const DashboardScreen(),
+    settingsScreen: (context) => const SettingsScreen(),
 
     webViewScreen: (context) => const WebViewScreen(),
 

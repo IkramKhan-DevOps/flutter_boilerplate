@@ -22,12 +22,29 @@ class DividerWidget extends StatelessWidget {
   }
 }
 
+class AppScreenPlaceholder extends StatelessWidget {
+  const AppScreenPlaceholder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: AppScreenUnderDevelopment(
+          size: 200,
+        ),
+      ),
+    );
+  }
+}
+
+
 class AppNoDataFoundWidget extends StatelessWidget {
   final String? heading;
   final String? message;
   final double? size;
 
-  const AppNoDataFoundWidget({super.key, this.heading, this.message, this.size});
+  const AppNoDataFoundWidget(
+      {super.key, this.heading, this.message, this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +78,52 @@ class AppNoDataFoundWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                   )
                 : const SizedBox.shrink(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class AppScreenUnderDevelopment extends StatelessWidget {
+  final String? heading;
+  final String? message;
+  final double? size;
+
+  const AppScreenUnderDevelopment(
+      {super.key, this.heading, this.message, this.size});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Lottie.asset(
+              LottieConstant.construction,
+              height: size ?? 200,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              heading ?? 'Under Constructions',
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              message ??
+                  'This screen is under development. Please check back later after some time.',
+              style: const TextStyle(
+                fontSize: 16,
+                fontStyle: FontStyle.italic,
+              ),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
@@ -103,7 +166,7 @@ class AppErrorWidget extends StatelessWidget {
                       fontSize: 16,
                       fontStyle: FontStyle.italic,
                     ),
-              textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,
                   )
                 : const SizedBox.shrink(),
           ],

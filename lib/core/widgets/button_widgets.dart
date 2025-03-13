@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
+
+import '../configs/app_colors.dart';
 
 class AppPrimaryButton extends StatelessWidget {
   final void Function() onPressed;
@@ -28,9 +31,9 @@ class AppPrimaryButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30), // Rounded edges
                 gradient: LinearGradient(
                   colors: [
-                    Colors.blue[900]!,
-                    Colors.blueAccent,
-                    Colors.blue[400]!,
+                    Colors.red[900]!,
+                    Colors.redAccent,
+                    Colors.red[400]!,
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -160,3 +163,4 @@ class SmallButtonWidget extends StatelessWidget {
     );
   }
 }
+

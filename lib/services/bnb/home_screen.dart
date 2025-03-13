@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/dashboard/dashboard_screen.dart';
+import 'package:flutter_boilerplate/products/products_screen.dart';
 import 'package:flutter_boilerplate/services/bnb/view/mobile_view.dart';
 import 'package:flutter_boilerplate/services/onboarding/splash_screen.dart';
+import 'package:flutter_boilerplate/settings/settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,10 +15,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex  = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    SplashScreen(),
-    SplashScreen(),
-    SplashScreen(),
-    SplashScreen(),
+    DashboardScreen(),
+    ProductsScreen(),
+    SettingsScreen(),
   ];
 
 

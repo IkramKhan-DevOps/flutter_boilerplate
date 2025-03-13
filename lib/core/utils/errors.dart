@@ -2,6 +2,8 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:toastification/toastification.dart';
 
+import '../configs/app_settings.dart';
+
 class FlushMessage {
   static Flushbar flushBar(BuildContext context, String message,
       [String tag = 'success']) {
@@ -76,7 +78,7 @@ class Toast {
   }
 
   static void show(BuildContext context, String message,
-      [String tag = 'success', heading = 'GR1P Says!']) {
+      [String tag = 'success', heading = '${AppSettings.appName} Says!']) {
     ColorScheme colors = Theme.of(context).colorScheme;
 
     toastification.show(

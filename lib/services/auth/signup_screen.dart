@@ -111,13 +111,9 @@ class SignupScreen extends ConsumerWidget {
                         ? const CircularProgressIndicator(
                       color: Colors.white,
                     )
-                        : const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(LineIcons.doorOpen),
-                        SizedBox(width: 3),
-                        Text('Sign Up'),
-                      ],
+                        : ButtonIconLabel(
+                      title: 'Register',
+                      icon: LineIcons.userPlus,
                     ),
                   ),
                   const SizedBox(height: 20),

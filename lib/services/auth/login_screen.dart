@@ -86,14 +86,10 @@ class LoginScreen extends ConsumerWidget {
                         ? const CircularProgressIndicator(
                             color: Colors.white,
                           )
-                        : const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(LineIcons.doorOpen),
-                              SizedBox(width: 3),
-                              Text('Login'),
-                            ],
-                          ),
+                        : ButtonIconLabel(
+                      title: 'Login',
+                      icon: LineIcons.doorOpen,
+                    ),
                   ),
                   const SizedBox(height: 20),
                 ],

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_boilerplate/core/constants/image_constants.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../../core/configs/app_colors.dart';
 import '../../core/configs/app_routes.dart';
 import '../../core/network/api_urls.dart';
-import '../../core/widgets/app_bar_widgets.dart';
 import '../../core/widgets/bottom_sheet_widgets.dart';
+import '../../core/widgets/button_widgets.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
@@ -16,11 +17,11 @@ class AuthScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     bool isTablet = size.width > 450;
     var isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
+    ColorScheme colors = Theme.of(context).colorScheme;
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        appBar: const AppBarAuth(),
         backgroundColor: AppColors.primary,
         bottomSheet: TermsBottomSheetWidget(
           onTap: () => Navigator.pushNamed(
@@ -34,19 +35,24 @@ class AuthScreen extends StatelessWidget {
         ),
         body: Center(
           child: SizedBox(
-            width: isTablet ? isPortrait ? size.width * 0.8 : size.width * 0.4 : size.width,
+            width: isTablet
+                ? isPortrait
+                    ? size.width * 0.8
+                    : size.width * 0.4
+                : size.width,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  //LOGO
-                  SizedBox(
-                    height: size.height * 0.4,
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
-                      ),
+
+                  Container(
+                    padding: EdgeInsets.all(40),
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: Image.asset(
+                      ImageConstants.logo, height: 100, width: 100,
                     ),
                   ),
 
@@ -56,8 +62,9 @@ class AuthScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end, // Align to bottom
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // Align to bottom
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           const Text(
                             'GET STARTED!',
@@ -75,64 +82,25 @@ class AuthScreen extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               fontSize: 34,
                             ),
+                            textAlign: TextAlign.center,
                           ),
-                          const SizedBox(height: 10),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextButton(
-                                onPressed: (){},
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 12, horizontal: 12),
-                                  elevation: 0,
-                                  backgroundColor: Colors.black54,
-                                ),
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      LineIcons.plusSquare,
-                                      size: 20,
-                                      color: AppColors.white,
-                                    ),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      'Registration',
-                                      style: TextStyle(
-                                        color: AppColors.white,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              TextButton(
-                                onPressed: (){},
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 12, horizontal: 12),
-                                  elevation: 0,
-                                  backgroundColor: Colors.black87,
-                                ),
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      LineIcons.doorOpen,
-                                      size: 20,
-                                      color: AppColors.white,
-                                    ),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      'Login',
-                                      style: TextStyle(
-                                        color: AppColors.white,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                          const SizedBox(height: 20),
+                          SizedBox(height: 10),
+                          AppPrimaryButton(
+                            onPressed: ()=> Navigator.pushNamed(context, AppRoutes.loginScreen),
+                            child: ButtonIconLabel(
+                              icon: LineIcons.doorOpen,
+                              title: 'Login',
+                            ),
+                          ),
+                          SizedBox(height: 10,),
+                          AppPrimaryButton(
+                            onPressed: ()=> Navigator.pushNamed(context, AppRoutes.signupScreen),
+                            outlinedButton: true,
+                            child: ButtonIconLabel(
+                              icon: LineIcons.userPlus,
+                              title: 'Register Now',
+                            ),
                           ),
                           const SizedBox(height: 40),
                         ],
